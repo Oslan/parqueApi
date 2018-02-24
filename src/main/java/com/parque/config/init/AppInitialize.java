@@ -3,7 +3,9 @@ package com.parque.config.init;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.parque.config.WebConfig;
+import com.parque.dao.ClienteDAO;
 import com.parque.facade.Facade;
+
 import com.parque.service.ContaService;
 
 public class AppInitialize extends AbstractAnnotationConfigDispatcherServletInitializer {

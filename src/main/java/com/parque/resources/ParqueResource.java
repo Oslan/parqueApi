@@ -19,5 +19,13 @@ public class ParqueResource {
 		
 		return facade.getContas(); 	
 	}
+	
+	@RequestMapping(value="/save",method=RequestMethod.GET)
+	public ResponseEntity<?> save() {
+		System.out.println("Save!");
+		
+		return facade.save();
+	}
+
 
 }

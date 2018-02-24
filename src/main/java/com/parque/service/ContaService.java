@@ -4,10 +4,12 @@ package com.parque.service;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.parque.dao.ClienteDAO;
 import com.parque.domain.Cliente;
 import com.parque.domain.Conta;
 import com.parque.dto.ClienteDTO;
@@ -15,6 +17,21 @@ import com.parque.dto.ContaDTO;
 
 @Service
 public class ContaService {
+	
+	
+	private ClienteDAO clienteDAO;
+	
+	 public ResponseEntity<?>save2(Cliente cliente){
+		 cliente= new Cliente();
+		 cliente.setId(1l);
+		 cliente.setNome("Oslan Caio Souza Aguiar");
+		 cliente.setEmail("caio.aguiar2528@gmail.com");
+		 clienteDAO.getInstance().persist(cliente);
+	    	return ResponseEntity
+	    			.status(HttpStatus.OK)
+	    			.body("OK");
+	  }
+	 
 	
 	  public ResponseEntity<?>getContas(){
 	    	return ResponseEntity
