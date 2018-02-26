@@ -23,7 +23,7 @@ public class ContaService {
 	
 	 public ResponseEntity<?>save2(Cliente cliente){
 		 cliente= new Cliente();
-		 cliente.setId(1l);
+		 
 		 cliente.setNome("Oslan Caio Souza Aguiar");
 		 cliente.setEmail("caio.aguiar2528@gmail.com");
 		 clienteDAO.getInstance().persist(cliente);

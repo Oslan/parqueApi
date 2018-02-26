@@ -3,6 +3,7 @@ package com.parque.domain;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+
 public class Conta implements Serializable {
 	/**
 	 * 
